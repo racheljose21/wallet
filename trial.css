@@ -1,0 +1,16 @@
+
+.card-body{
+    margin: auto;
+    padding:0.5rem;
+}
+
+.row{
+    padding-bottom:0.5rem;
+    padding-top: 0.5rem;
+}
+.bg-color{
+    background-color: blue;
+}
+.card-body i{
+    padding-left: 40%;
+}
