@@ -1,0 +1,9 @@
+.navbar{
+    background-color: blue;
+}
+.container{
+    padding-top: 5%;
+}
+body{
+	background-image:linear-gradient(to right,#039be5 33.33%,#ffc107 33.33%);
+}
