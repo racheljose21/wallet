@@ -12,12 +12,11 @@ if(isset($_POST['login_button'])) {
 
 	if($check_login_query == 1) {
 		$row = mysqli_fetch_array($check_database_query);
-		$username = $row['username'];
+		$userid = $row['id'];
 
-		$user_closed_query = mysqli_query($con, "SELECT * FROM users WHERE email='$email'");
 		
-		$_SESSION['username'] = $username;
-		header("Location: index.php");
+		$_SESSION['userid'] = $userid;
+		header("Location: mobile_recharge.php");
 		exit();
 	}
 	else {
