@@ -27,30 +27,30 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title"><center><u>Add Money</u></center></h2>
+                    <h2 class="title"><center><u>DTH Recharge</u></center></h2>
                     <form method="POST">
                         <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Registered Mobile Number" name="phone">
+						</div>
+						<div class="input-group">
                             <input class="input--style-3" type="text" placeholder="Amount" name="amount">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Card Number" name="card no." minlength="16" maxlength="20">
-                        </div>
-                            <div class="input-group">
-                                    <input class="input--style-3" type="text" placeholder="Name (on Card)" name="name">
-                                
-                        </div>
-
-                        <div class="input-group">
-                                <input class="input--style-3 js-datepicker" type="text" placeholder="Expiry Date (1/M/Y)" name="expiry">
-                                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+						</div>
+						<div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="operator">
+                                    <option disabled="disabled" selected="selected">Operator</option>
+                                    <option value="airtel">Airtel Digital TC</option>
+                                    <option value="dish">Dish TV</option>
+									<option value="tata">Tata Sky</option>
+									<option value="d2t">D2H</option>
+                                </select>
+                                <div class="select-dropdown"></div>
                             </div>
-                            
-
-                        <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="CVV" name="cvv">
                         </div>
                         <div class="p-t-10">
+                            <center>
                             <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                            </center>
                         </div>
                     </form>
                 </div>

@@ -499,12 +499,13 @@ input {
   background: url("../images/bg-heading-03.jpg") top left/cover no-repeat;
   display: table-cell;
   width: 50%;
+
 }
 
 .card-3 .card-body {
-  padding: 57px 65px;
-  padding-bottom: 65px;
-  display: table-cell;
+  padding: 65px 65px;
+
+  display: table;
 }
 
 @media (max-width: 767px) {
