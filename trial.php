@@ -4,8 +4,12 @@
 <?php
 
 if(isset($_POST['submit'])){
+	$selected_val='';
     $selected_val = $_POST['Color'];  // Storing Selected Value In Variable
-    echo "You have selected :" .$selected_val;  // Displaying Selected Value
+    echo "You have selected :" .$selected_val; 
+		 $selected_val='';// Displaying Selected Value
+		 
+	$_POST['submit']=0;
     }
 ?>
 
@@ -19,7 +23,7 @@ if(isset($_POST['submit'])){
 <body>
 <form action="#" method="post">
 <select name="Color">
-<option value="Red">Red</option>
+<option value="Red">f</option>
 <option value="Green">Green</option>
 <option value="Blue">Blue</option>
 <option value="Pink">Pink</option>

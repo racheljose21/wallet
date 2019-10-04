@@ -1,5 +1,5 @@
 <?php
-require 'config/config.php';
+require '../config/config.php';
 
 if(isset($_SESSION['userid']))
 {
@@ -8,7 +8,7 @@ if(isset($_SESSION['userid']))
     $user=mysqli_fetch_array($user_details_query);
 }
 else{
-    header("Location:login2.php");
+    header("Location:../login2.php");
 }
 
 ?>
