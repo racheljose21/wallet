@@ -48,6 +48,16 @@ if(isset($_POST['dth'])){
 <br>
 
 <?php if(in_array('Recharge Successful!<br>', $error_array)) echo 'Recharge Successful!<br>'; ?>
+<?php if(in_array('Enter a valid amount<br>', $error_array)) echo 'Enter a valid amount<br>'; ?>
 <?php if(in_array('Insufficient balance. Please add money into your wallet to continue<br>', $error_array)) echo 'Insufficient balance. Please add money into your wallet to continue<br>'; ?>
-      <?php  $error_array=''; ?>
+<?php if(in_array('Enter a valid Phone number<br>', $error_array)) echo'Enter a valid Phone number<br>'; ?>
+      
 </form>
+</body>
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+</html>

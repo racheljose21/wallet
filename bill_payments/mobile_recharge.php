@@ -6,6 +6,7 @@ $amount="";
 $type="";
 $operator="";
 $phone="";
+$error_array=array();
 if(isset($_POST['mrecharge'])){
 	$mrech = new mob_rech($con, $userLoggedIn);
 	$amount=$_POST['amount'];
@@ -22,7 +23,7 @@ if(isset($_POST['mrecharge'])){
 	
 	$operator=$_POST['city'];
 
-	$mrech->recharge($phone,$amount,$operator,$type);
+	$error_array=$mrech->recharge($phone,$amount,$operator,$type,$error_array);
 	$amount="";
 	$type="";
 	$operator="";
@@ -60,4 +61,20 @@ if(isset($_POST['mrecharge'])){
 
 <br><br>
 <input type="submit" name="mrecharge" value="Recharge">
+<br>
+<?php if(in_array('Enter a valid amount<br>', $error_array)) echo 'Enter a valid amount<br>'; ?>
+<?php if(in_array('Enter a valid Phone number<br>', $error_array)) echo 'Enter a valid Phone number<br>'; ?>
+<?php if(in_array('Select an if prepaid or postpaid<br>', $error_array)) echo 'Select an if prepaid or postpaid<br>'; ?>
+<?php if(in_array('Insufficient balance<br>', $error_array)) echo 'Insufficient balance<br>'; ?>
+<?php if(in_array('Recharge Successful!<br>', $error_array)) echo 'Recharge Successful!<br>'; ?>
+
+
 </form>
+</body>
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+</html>

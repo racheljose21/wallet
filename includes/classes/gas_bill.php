@@ -32,7 +32,9 @@ class gas_bill{
             $balance=$this->user_obj->getBalance();
             $balance=$balance-$amount;
             $update_query = mysqli_query($this->con, "UPDATE users SET balance='$balance' WHERE id='$added_by'");
+            $query_trans=mysqli_query($this->con,"INSERT INTO transactions VALUES($added_by,'gas_bils_pending',$gas_id,$amount,'$date_added')");
             array_push($error_array, "Bill payment successful<br>");
+
 
         }
         else{

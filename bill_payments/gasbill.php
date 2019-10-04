@@ -7,7 +7,6 @@ require '../includes/form_handlers/gas_bill_search.php';
 
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +20,7 @@ require '../includes/form_handlers/gas_bill_search.php';
     <div id='searchbill'>
         <form action="" method ="post">
             <input type="text" name="search" hint="Please Enter your bill id">
-            <button onclick="javascript:switchVisible();" type="submit" name="findgasbill" value="Search">Search</button>
+            <button  type="submit" name="findgasbill" value="Search">Search</button>
             <?php if(in_array('Invalid gas id<br>', $error_array)) echo 'Invalid gas id<br>'; ?>
 
         </form>
@@ -30,7 +29,7 @@ require '../includes/form_handlers/gas_bill_search.php';
     </div>
     <div class='paybill' id='paybill'>
          <form action="" method ="post">
-        <button onclick="javascript:switchVisible();" type="submit" name="paygasbill" value="Pay" >Pay</button>
+        <button  type="submit" name="paygasbill" value="Pay" >Pay</button>
         <?php if(in_array("No Bills Pending<br>", $error_array)) echo "No Bills Pending<br>"; ?>
         <?php if(in_array("Insufficient balance<br>", $error_array)) echo "Insufficient balance<br>"; ?>
         <?php if(in_array("Bill payment successful<br>", $error_array)) echo "Bill payment successful<br>"; ?>
@@ -44,5 +43,9 @@ require '../includes/form_handlers/gas_bill_search.php';
    
 
 </body>
-
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </html>
