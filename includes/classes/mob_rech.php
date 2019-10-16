@@ -29,6 +29,7 @@ class mob_rech {
                 $query = mysqli_query($this->con, "INSERT INTO mrecharge VALUES('', $added_by, '$phone', $amount,'$operator','$type','$date_added')");
                 $last_id = mysqli_insert_id($this->con);
                 $balance=$this->user_obj->getBalance();
+                $this->user_obj->getTransactions();
                 $balance=$balance-$amount;
                 $update_query = mysqli_query($this->con, "UPDATE users SET balance='$balance' WHERE id='$added_by'");
                 $query_trans=mysqli_query($this->con,"INSERT INTO transactions VALUES($added_by,'mrecharge',$last_id,$amount,'$date_added')");

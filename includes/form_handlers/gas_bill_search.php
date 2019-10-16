@@ -23,9 +23,30 @@ if(isset($_POST['findgasbill'])){
         $gid=$row['gasbill_id'];
         $_SESSION['gid']=$gid;
         $_SESSION['gamount']=$gamount;
-        echo ''. $gname;
-        echo ''. $gprovider;
-        echo ''. $gamount;
+        $str = "
+        <br>
+        <div class='container' style='
+        display: inline-flex;
+    '>
+
+								<div class='posted_by' style='color:#ACACAC;margin: auto;'>
+									<h6>$gname</h6>
+									<p>Amount: $gamount</p>
+									</div>
+
+                            
+                            
+                            <div class='paybill' id='paybill' style='margin: auto;'>
+         <form action='gasbill1.php' method ='post'>
+        <button  type='submit' name='paygasbill' value='Pay' >Pay</button>
+
+
+					
+    </form>
+        
+    </div>
+    </div>
+							<hr>";
         }
         
         

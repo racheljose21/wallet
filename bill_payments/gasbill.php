@@ -2,8 +2,8 @@
 require '../includes/header.php';
 require '../includes/classes/User.php';
 require '../includes/classes/gas_bill.php';
+$str='';
 require '../includes/form_handlers/gas_bill_search.php';
-
 
 ?>
 
@@ -13,6 +13,8 @@ require '../includes/form_handlers/gas_bill_search.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gas Bill</title>
+    <link href="../assets/css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -27,19 +29,20 @@ require '../includes/form_handlers/gas_bill_search.php';
         
 
     </div>
-    <div class='paybill' id='paybill'>
-         <form action="" method ="post">
-        <button  type="submit" name="paygasbill" value="Pay" >Pay</button>
-        <?php if(in_array("No Bills Pending<br>", $error_array)) echo "No Bills Pending<br>"; ?>
+    <?php if($str!='') echo $str; ?> 
+        <?php if(in_array("No Bills Pending<br>", $error_array)) echo "
+        <hr>
+        <div class='status_post'>
+
+<div class='posted_by' style='color:#ACACAC;'>
+    <h6>No Bills Pending</h6>
+    </div>
+
+</div>"; ?>
         <?php if(in_array("Insufficient balance<br>", $error_array)) echo "Insufficient balance<br>"; ?>
         <?php if(in_array("Bill payment successful<br>", $error_array)) echo "Bill payment successful<br>"; ?>
 
 
-					
-    </form>
-        
-
-    </div>
    
 
 </body>

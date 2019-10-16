@@ -16,7 +16,7 @@ if(isset($_POST['login_button'])) {
 
 		
 		$_SESSION['userid'] = $userid;
-		header("Location: bill_payments/gasbill.php");
+		header("Location: bill_payments/gasbill1.php");
 		exit();
 	}
 	else {
